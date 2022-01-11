@@ -9,8 +9,13 @@ jobs:
     steps:
       - name: checkout codde 
         uses : actions/checkout@v2 
-      - name: Run Actions
-        uses: github/super-linter@v3
+      - name : setup-python
+        uses : actions/setup-python@v2
+      - name : Run asset
+        run : pip install PyGithub
+      - name : Run script
+        run : python main.py
+        
         env:
           DEFAULT_BRANCH : main
           GIHTHUB_TOKEN : ${{secrets.GITHUB_TOKEN}}
