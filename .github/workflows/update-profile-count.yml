@@ -1,22 +1,21 @@
-name: Update File Count
-on:
-  schedule:
-    - cron: '0 0 * * *'
+name : Update-profile-count
+
+on : 
   push:
-    branches: 
-      - master
+    branches:
+      - master 
 
 jobs:
-  update-file-count:
-    runs-on: ubuntu-latest
+  Update-profile-count:
+    name : Update-profile-count
+    runs-on : ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      with:
-       python-version: 3.8
-    - name: Execute py script
-      run: |
-         pip install PyGithub==1.54.1 && 
-         python main.py
-      env:
-        ACCESS_TOKEN: ${{secrets.GH_TOKEN}}
+      - uses : actions/checkout@v2 
+      - uses : actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Exevute py script
+        run: |
+          pip install PyGithub && python main.py
+        env:
+          ACCESS_TOKEN: ${{secrets.GH_TOKEN}}
