@@ -1,0 +1,16 @@
+name: Actions-demo
+on: push 
+
+
+jobs:
+  Actions-demo:
+    name: actions Actions-demo
+    runs-on : ubuntu-latest
+    steps:
+      - name: checkout codde 
+        uses : actions/checkout@v2 
+      - name: Run Actions
+        uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH : main
+          GIHTHUB_TOKEN : ${{secrets.GITHUB_TOKEN}}
