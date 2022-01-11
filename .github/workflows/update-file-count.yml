@@ -17,6 +17,6 @@ jobs:
     - name: Execute py script
       run: |
          pip install PyGithub==1.54.1 && 
-         python main.py
+         python count.py
       env:
         ACCESS_TOKEN: ${{secrets.GH_TOKEN}}
