@@ -1,10 +1,10 @@
-name: Actions-demo
+name: Update-profile
 on: push 
 
 
 jobs:
   Actions-demo:
-    name: actions Actions-demo
+    name: update profile
     runs-on : ubuntu-latest
     steps:
       - name: checkout codde 
