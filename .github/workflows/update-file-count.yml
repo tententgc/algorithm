@@ -19,4 +19,4 @@ jobs:
          pip install PyGithub==1.54.1 && 
          python main.py
       env:
-        ACCESS_TOKEN: ${{secrets.GH_TOKEN}}
+        TOKEN: ${{secrets.GH_TOKEN}}
