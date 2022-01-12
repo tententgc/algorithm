@@ -18,7 +18,7 @@ class GithubController:
 		self.PATH = '/README.md'
 
 	def get_data(self):
-		contents = self.repo.get_contents(self.PATH, 'master')
+		contents = self.repo.get_contents(self.PATH, 'main')
 		self.PATH = contents.path
 		self.SHA = contents.sha
 		base = contents.content
@@ -28,7 +28,7 @@ class GithubController:
 	def write_data(self, content):
 		if content != self.file_content:
 			self.repo.update_file(
-				self.PATH, 'action: Update File Count :zap:', content, self.SHA)
+				self.PATH, 'action: Update-profile :zap:', content, self.SHA)
 
 
 def createRow(fileType, number):
