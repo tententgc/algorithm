@@ -5,5 +5,6 @@ var searchInsert = function (nums, target) {
             return i
         }
     }
+    
     return nums.length;
 };
