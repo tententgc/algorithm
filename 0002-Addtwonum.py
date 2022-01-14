@@ -15,6 +15,7 @@ class Solution(object):
         c = a+b
         d = [int(i) for i in str(c)]
         d.reverse()
+        
 
         head = ListNode(d[0])
         current = head
