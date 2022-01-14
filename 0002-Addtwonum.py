@@ -13,7 +13,6 @@ class Solution(object):
             l2 = l2.next
             i = i+1
         c = a+b
-
         d = [int(i) for i in str(c)]
         d.reverse()
 
