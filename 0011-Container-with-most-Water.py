@@ -1,3 +1,4 @@
+
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         best_area = 0
