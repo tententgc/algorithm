@@ -1,4 +1,10 @@
 def longestCommonPrefix(strs):
+    '''
+    Find the longest common prefix of two strings
+    
+    :param strs: a list of strings
+    :return: The longest common prefix of the two strings.
+    '''
     q=""
     str1, str2 = min(strs), max(strs) 
     i=0

@@ -1,4 +1,10 @@
 def threeSum(nums): 
+    '''
+    Given a list of integers, find all unique triplets that sum up to 0
+    
+    :param nums: an array of integers
+    :return: A list of tuples.
+    '''
     res = []
     nums.sort()
     for i in range(len(nums)-2):

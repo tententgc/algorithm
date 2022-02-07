@@ -1,3 +1,9 @@
+# 1. Remove all the whitespaces in the string.
+# 2. Find all the numbers in the string.
+# 3. If the number is "-0", return 0.
+# 4. If the number is greater than 2**31-1, return 2**31-1.
+# 5. If the number is smaller than -2**31, return -2**31.
+# 6. Return the number.
 import re
 
 

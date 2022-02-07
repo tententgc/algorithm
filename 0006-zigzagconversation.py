@@ -1,3 +1,12 @@
+# 1. Create a list of strings with length equal to the number of rows. 
+# 2. Create a variable called going_down that is True. 
+# 3. Create a variable called count that is equal to the first row. 
+# 4. Create a variable called rows that is equal to the number of rows minus 1. 
+# 5. Iterate through the string. 
+# 6. If going_down is True, add the letter to the string at the index count. 
+# 7. Increment count by 1. 
+# 8. If count is
+
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
         res = [""] * numRows

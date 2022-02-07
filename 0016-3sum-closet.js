@@ -1,3 +1,4 @@
+/* Find the closest sum of three numbers in an array to a target number. */
 var threeSumClosest = function (nums, target) {
     nums.sort((a, b) => a - b)
     let diff = Infinity;
