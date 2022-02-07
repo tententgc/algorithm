@@ -1,3 +1,17 @@
+# Convert the linked list to an integer, add the integers, convert the sum to a linked list.
+# 
+# # Python
+# class Solution(object):
+#     def addTwoNumbers(self, l1, l2):
+#         a = 0
+#         b = 0
+#         i = 0
+#         while l1:
+#             a = a+l1.val*(10**i)
+#             l1 = l1.next
+#             i = i+1
+#         i = 0
+#         while l2:
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
         i = 0
