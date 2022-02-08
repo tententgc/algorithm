@@ -1,3 +1,14 @@
+# Given a linked list, remove the nth node from the end of the list and return its head.
+# 
+# Follow up: Could you do this in one pass?
+# 
+# # Solution
+# # 
+# # | **Time** | **Space** |
+# # |---|---|
+# # | O(n) | O(1) |
+# # 
+# #
 class Solution:
     def removeNthFromEnd(self, head, n):
         def index(node):
