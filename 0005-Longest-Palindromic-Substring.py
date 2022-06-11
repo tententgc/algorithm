@@ -15,7 +15,6 @@ class Solution:
             for ch in s[indLen:]:
                 temp += ch
                 if temp == temp[::-1]:
-                    outString = temp if len(temp) > len(
-                        outString) else outString
+                    outString = temp if len(temp) > len(outString) else outString
             s = s[1:]
         return outString
