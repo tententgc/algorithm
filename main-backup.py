@@ -14,8 +14,8 @@ sumFile = 0
 class GithubController:
 	def __init__(self, ACCESS_TOKEN):
 		g = github.Github(ACCESS_TOKEN)
-		self.repo = g.get_repo('tententgc/problem-solving')
-		self.PATH = 'Leetcode/README.md'
+		self.repo = g.get_repo('tententgc/LeetCodeSolution')
+		self.PATH = '/README.md'
 
 	def get_data(self):
 		contents = self.repo.get_contents(self.PATH, 'main')
@@ -38,7 +38,7 @@ def createRow(fileType, number):
 def countFile():
 	global data
 	global sumFile
-	for dirname, _, filenames in os.walk('Leetcode/.'):
+	for dirname, _, filenames in os.walk('.'):
 		if(dirname == '.'):
 			for i in filenames:
 				i = i.split('.')
