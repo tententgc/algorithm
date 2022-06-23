@@ -2,7 +2,7 @@ import os
 import github
 import base64
 
-detail = '''# tenten Leetcode Collection
+detail = '''# tenten Beta programming collection
 
 '''
 head = '<table><tr><td>File Type</td><td>Number</td></tr>'
