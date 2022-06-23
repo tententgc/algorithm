@@ -15,7 +15,7 @@ class GithubController:
 	def __init__(self, ACCESS_TOKEN):
 		g = github.Github(ACCESS_TOKEN)
 		self.repo = g.get_repo('tententgc/LeetCodeSolution')
-		self.PATH = 'BetaPrograming/beta-count.md'
+		self.PATH = 'Betaprograming/beta-count.md'
 
 	def get_data(self):
 		contents = self.repo.get_contents(self.PATH, 'main')
