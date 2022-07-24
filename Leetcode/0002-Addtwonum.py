@@ -1,40 +1,27 @@
-# Convert the linked list to an integer, add the integers, convert the sum to a linked list.
-# 
-# # Python
-# class Solution(object):
-#     def addTwoNumbers(self, l1, l2):
-#         a = 0
-#         b = 0
-#         i = 0
-#         while l1:
-#             a = a+l1.val*(10**i)
-#             l1 = l1.next
-#             i = i+1
-#         i = 0
-#         while l2:
-class Solution(object):
-    def addTwoNumbers(self, l1, l2):
-        i = 0
-        a = 0
-        b = 0
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        num1 = num2 = counter = 0
+
         while l1:
-            a = a+l1.val*(10**i)
+            num1 += l1.val * 10 ** counter
             l1 = l1.next
-            i = i+1
-        i = 0
+            counter += 1
+        counter = 0
+
         while l2:
-            b = b+l2.val*(10**i)
+            num2 += l2.val * 10 ** counter
             l2 = l2.next
-            i = i+1
-        c = a+b
-        d = [int(i) for i in str(c)]
-        d.reverse()
-        
+            counter += 1
 
-        head = ListNode(d[0])
-        current = head
-        for i in d[1:]:
-            current.next = ListNode(i)
-            current = current.next
+        sumres = num1 + num2
+        res = str(sumres)
+        answer = [x for x in res]
+        answer.reverse()
 
-        return head
+        head = ListNode()
+        ans = head
+        for digit in answer:
+            ans.next = ListNode(digit)
+            ans = ans.next
+
+        return head.next
