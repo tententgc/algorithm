@@ -1,20 +1,22 @@
-# 1. We start with an empty string, `outString`, and a string, `s`, that we want to find the longest
-# palindrome in.
-# 2. We start with a string, `outString`, that is the length of the longest palindrome we've found so
-# far.
-# 3. We iterate through the string, `s`, and for each character, `ch`, we add it to the end of the
-# string, `temp`, and check if `temp` is a palindrome.
-# 4. If `temp` is a pal
-
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        outString = ""
-        while len(s) > len(outString):
-            indLen = len(outString)
-            temp = s[: indLen]
-            for ch in s[indLen:]:
-                temp += ch
-                if temp == temp[::-1]:
-                    outString = temp if len(temp) > len(outString) else outString
-            s = s[1:]
-        return outString
+
+        res = ""
+
+        def solve(s, start, end):
+            while (start >= 0 and end < len(s) and s[start] == s[end]):
+                start -= 1
+                end += 1
+            return s[start+1:end]
+
+        for i in range(len(s)):
+
+            s1 = solve(s, i, i)
+            s2 = solve(s, i, i+1)
+
+            if len(s1) > len(res):
+                res = s1
+            if len(s2) > len(res):
+                res = s2
+
+        return res
