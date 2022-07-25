@@ -1,11 +1,20 @@
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        max_l = 0
-        sub = ''
+ def lengthOfLongestSubstring(self, s: str) -> int:
+       if len(s) < 2:
+            return len(s)
+
+        substring = ""
+        maxlength = 0
+
         for ch in s:
-            if ch in s:
-                sub = sub[sub.find(ch)+1:]
-            sub += ch
-            if len(sub) > max_l:
-                max_l = len(sub)
-        return max_l
+            if ch not in substring:
+                substring += ch
+                if len(substring) > maxlength:
+                    maxlength = len(substring)
+
+            else:
+                while ch in substring:
+                    substring = substring[1:]
+                substring += ch
+
+        return maxlength
+print(lengthOfLongestSubstring("abcabcbb"))
