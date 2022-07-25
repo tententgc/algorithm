@@ -10,9 +10,9 @@ def twosum(nums, target) :
             dic[key].append(val)
 
     for key, val in dic.items():
-        if target-key in dic:
-            if key != target-key:
-                return [dic[key][0], dic[target-key][0]]
+        if target - key in dic:
+            if key != target - key:
+                return [dic[key][0], dic[target - key][0]]
             elif len(dic[key])  > 1:
                 return [dic[key][0], dic[key][1]]
 
